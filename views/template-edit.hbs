@@ -1,0 +1,13 @@
+{{#extend "page"}}
+{{#content "content"}}
+<form data-model="template" action="/templates/{{ template._id }}" method="POST">
+  <h1 data-control="input" data-name="name">
+    {{ template.name }}
+  </h1>
+  <div data-control="textarea" data-name="content">
+      {{ template.content }}
+  </div>
+  <input type="submit" value="Enregistrer">
+</form>
+{{/content}}
+{{/extend}}

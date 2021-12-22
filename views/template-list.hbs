@@ -1,0 +1,33 @@
+{{#extend "page"}}
+{{#content "content"}}
+<table class="table">
+    <tr>
+        <th>Name</th>
+        <th>Created at</th>
+        <th>Updated at</th>
+        <th>Actions</th>
+    </tr>
+    {{#each templates}}
+    <tr>
+        <td>{{name}}</td>
+        <td>{{formatDate createdAt}}</td>
+        <td>{{formatDate updatedAt}}</td>
+        <td>
+            <a href="/templates/generate/{{_id}}">
+                Génerer
+            </a>
+            <a href="/templates/{{_id}}">
+                Editer
+            </a>
+            <a href="/templates/{{_id}}/delete">
+                Supprimer
+            </a>
+        </td>
+    </tr>
+    {{/each}}
+</table>
+<a href="/templates/create">
+    Create new template
+</a>
+{{/content}}
+{{/extend}}

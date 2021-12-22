@@ -1,0 +1,12 @@
+{{> nav-login}}
+<div class="card p-4 mt-4 bg-light">
+    <form 
+        id="login"
+        action="/auth/login"
+        method="POST"
+    >
+        <div data-control="input" data-type="text" data-name="name" data-placeholder="username"></div>
+        <div data-control="input" data-type="password" data-name="password" data-placeholder="password"></div>
+        <input class="btn btn-primary" type="submit" value="Connect">
+    </form>
+</div>

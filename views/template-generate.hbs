@@ -1,0 +1,19 @@
+{{#extend "page"}}
+{{#content "content"}}
+<form id="generate">
+    <h1>
+        {{ template.name }}
+    </h1>
+    <div id="variables">
+
+    </div>
+    <div data-name="template" data-control="hidden">
+        {{ template.content }}
+    </div>
+    <div data-name="output" data-control="textarea">
+        {{ template.content }}
+    </div>
+    <input type="submit" value="Générer">
+</form>
+{{/content}}
+{{/extend}}
