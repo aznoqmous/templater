@@ -10,6 +10,9 @@ export default class Element {
     build(){}
 
     bind(){}
+    clear(){
+        this.element.innerHTML = ""
+    }
 
     static bindAll(){
         [...document.querySelectorAll(this.selector)]

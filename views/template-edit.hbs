@@ -1,11 +1,30 @@
 {{#extend "page"}}
 {{#content "content"}}
 <form data-model="template" action="/templates/{{ template._id }}" method="POST">
-  <h1 data-control="input" data-name="name">
-    {{ template.name }}
-  </h1>
-  <div data-control="textarea" data-name="content">
+
+  <div class="form-group">
+    <label>Nom</label>
+    <h1 data-control="input" data-name="name">
+      {{ template.name }}
+    </h1>
+  </div>
+
+  <div class="alert alert-info">
+    <div>
+      <strong>
+        Variables
+      </strong>
+    </div>
+    <ul id="variables">
+    </ul>
+    <small>Pour créer une variable, utilisez les accolades ex: {nom_de_variable}</small>
+  </div>
+
+  <div class="form-group">
+    <label>Contenu</label>
+    <div data-control="textarea" data-name="content">
       {{ template.content }}
+    </div>
   </div>
   <input type="submit" value="Enregistrer">
 </form>

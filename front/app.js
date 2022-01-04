@@ -6,6 +6,7 @@ import FormModel from "./element/forms/form-model";
 import FormTemplateGenerate from "./element/forms/form-template-generate";
 import Link from "./element/link";
 import LogoutButton from "./element/logout-btn";
+import Variables from "./element/variables";
 import Security from "./security";
 
 export default class App {
@@ -44,6 +45,7 @@ export default class App {
         ControlHidden.bindAll()
         ControlTextarea.bindAll()
         LogoutButton.bindAll()
+        Variables.bindAll()
 
         FormTemplateGenerate.bindAll()
     }
